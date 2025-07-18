@@ -1,0 +1,39 @@
+{% load static %}
+<html>
+<head>
+<title>Online Fraud Payment Detection</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link href="{% static 'style.css' %}" rel="stylesheet" type="text/css" />
+</head>
+<style>
+body {
+  background-image: url("{% static 'images/back.jpg' %}");
+}
+</style>
+<body>
+<div class="main">
+  <div class="main_resize">
+    <div class="header">
+      <div class="logo">
+        <h1><span>Online Fraud Payment Detection using Balanced ML Algorithms</span><small></small></h1>
+      </div>
+    </div>
+    <div class="content">
+      <div class="content_bg">
+        <div class="menu_nav">
+         <ul>      
+		  <li><a href="{% url 'LoadDataset' %}"><font size="3" color="black">Load & Processed Dataset</a></li>
+		  <li><a href="{% url 'BalancedData' %}"><font size="3" color="black">Balanced Data using ML</a></li>
+		  <li><a href="{% url 'TrainML' %}"><font size="3" color="black">Train ML Models</a></li>
+		  <li><a href="{% url 'Predict' %}"><font size="3" color="black">Detect Fraud</a></li>
+     <li><a href="{% url 'index' %}"><font size="3" color="black">Logout</a></li>
+   </ul>          
+        </div>
+        <div class="hbg"><img src="{% static 'images/header_images.jpg' %}" width="1010" height="200" alt="" /></div>
+
+		<center><font face="verdana" color="black">{{ data|safe }}</center></font><br/>
+		<img src="data:image/png;base64, {{ img }}" alt="" />
+
+       
+  </body>
+</html>
